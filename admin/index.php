@@ -210,7 +210,7 @@
                                                     <?php    echo $appointmentrow ->num_rows  ?>
                                                 </div><br>
                                                 <div class="h3-dashboard" >
-                                                    NewBooking &nbsp;&nbsp;
+                                                    New Appointment(s) &nbsp;&nbsp;
                                                 </div>
                                         </div>
                                                 <div class="btn-icon-back dashboard-icons" style="margin-left: 0px;background-image: url('../img/icons/book-hover.svg');"></div>

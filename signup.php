@@ -112,11 +112,11 @@ if($_POST){
             </tr>
 
             <tr>
-                <td>
+                <!-- <td>
                     <input type="reset" value="Reset" class="login-btn btn-primary-soft btn" >
-                </td>
-                <td>
-                    <input type="submit" value="Next" class="login-btn btn-primary btn">
+                </td> -->
+                <td colspan="2">
+                    <input type="submit" value="Next" class="login-btn btn-primary btn" >
                 </td>
 
             </tr>

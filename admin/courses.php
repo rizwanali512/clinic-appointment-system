@@ -108,7 +108,7 @@
                 <tr >
                     
                     <td>
-                        <p style="font-size: 23px;padding-left:12px;font-weight: 600;">Refreshers Courses</p>
+                        <p style="font-size: 23px;padding-left:12px;font-weight: 600;">Refresher Courses</p>
                                            
                     </td>
                     <td width="13%" >
@@ -266,7 +266,7 @@
                                 </th>
                                 <th class="table-headin" width="20%">
                                     
-                                    Open
+                                    Action
                                     
                                 </tr>
                         </thead>

@@ -195,7 +195,7 @@
                                 <th class="table-headin">
                                 
                             
-                                Telephone
+                                Cell
                                 
                                 </th>
                                 <th class="table-headin">
@@ -364,7 +364,7 @@
                             </tr>
                             <tr>
                                 <td class="label-td" colspan="2">
-                                    <label for="Tele" class="form-label">Telephone: </label>
+                                    <label for="Tele" class="form-label">Cell: </label>
                                 </td>
                             </tr>
                             <tr>
