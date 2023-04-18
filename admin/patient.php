@@ -69,7 +69,7 @@
                         <a href="index.php" class="non-style-link-menu"><div><p class="menu-text">Dashboard</p></a></div></a>
                     </td>
                 </tr>
-                <tr class="menu-row">
+                <!-- <tr class="menu-row">
                     <td class="menu-btn menu-icon-doctor ">
                         <a href="doctors.php" class="non-style-link-menu "><div><p class="menu-text">Doctors</p></a></div>
                     </td>
@@ -78,12 +78,22 @@
                     <td class="menu-btn menu-icon-schedule">
                         <a href="schedule.php" class="non-style-link-menu"><div><p class="menu-text">Schedule</p></div></a>
                     </td>
-                </tr>
+                </tr> -->
                 <tr class="menu-row">
                     <td class="menu-btn menu-icon-appoinment">
                         <a href="appointment.php" class="non-style-link-menu"><div><p class="menu-text">Appointment</p></a></div>
                     </td>
                 </tr>
+                <tr class="menu-row">
+                    <td class="menu-btn menu-icon-online-learning ">
+                        <a href="courses.php" class="non-style-link-menu "><div><p class="menu-text">Refresher Courses (Docs)</p></a></div>
+                    </td>
+                </tr> 
+                <tr class="menu-row">
+                    <td class="menu-btn menu-icon-video ">
+                        <a href="videos.php" class="non-style-link-menu "><div><p class="menu-text">Media Content (Videos)</p></a></div>
+                    </td>
+                </tr> 
                 <tr class="menu-row" >
                     <td class="menu-btn menu-icon-patient  menu-active menu-icon-patient-active">
                         <a href="patient.php" class="non-style-link-menu  non-style-link-menu-active"><div><p class="menu-text">Patients</p></a></div>
@@ -173,7 +183,7 @@
                        <center>
                         <div class="abc scroll">
                         <table width="93%" class="sub-table scrolldown"  style="border-spacing:0;">
-                        <thead>
+                        <thead style="background:#FFC0CB;">
                         <tr>
                                 <th class="table-headin">
                                     
@@ -181,12 +191,7 @@
                                 Name
                                 
                                 </th>
-                                <th class="table-headin">
-                                    
                                 
-                                    NIC
-                                    
-                                </th>
                                 <th class="table-headin">
                                 
                             
@@ -241,13 +246,11 @@
                                     $dob=$row["pdob"];
                                     $tel=$row["ptel"];
                                     
-                                    echo '<tr>
+                                    echo '<tr style="text-align:center;">
                                         <td> &nbsp;'.
                                         substr($name,0,35)
                                         .'</td>
-                                        <td>
-                                        '.substr($nic,0,12).'
-                                        </td>
+                                        
                                         <td>
                                             '.substr($tel,0,10).'
                                         </td>

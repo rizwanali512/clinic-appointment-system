@@ -70,7 +70,7 @@
                         <a href="index.php" class="non-style-link-menu"><div><p class="menu-text">Dashboard</p></a></div></a>
                     </td>
                 </tr>
-                <tr class="menu-row">
+                <!-- <tr class="menu-row">
                     <td class="menu-btn menu-icon-doctor ">
                         <a href="doctors.php" class="non-style-link-menu "><div><p class="menu-text">Doctors</p></a></div>
                     </td>
@@ -79,12 +79,22 @@
                     <td class="menu-btn menu-icon-schedule ">
                         <a href="schedule.php" class="non-style-link-menu"><div><p class="menu-text">Schedule</p></div></a>
                     </td>
-                </tr>
+                </tr> -->
                 <tr class="menu-row">
                     <td class="menu-btn menu-icon-appoinment menu-active menu-icon-appoinment-active">
                         <a href="appointment.php" class="non-style-link-menu non-style-link-menu-active"><div><p class="menu-text">Appointment</p></a></div>
                     </td>
                 </tr>
+                <tr class="menu-row">
+                    <td class="menu-btn menu-icon-online-learning ">
+                        <a href="courses.php" class="non-style-link-menu "><div><p class="menu-text">Refresher Courses (Docs)</p></a></div>
+                    </td>
+                </tr> 
+                <tr class="menu-row">
+                    <td class="menu-btn menu-icon-video ">
+                        <a href="videos.php" class="non-style-link-menu "><div><p class="menu-text">Media Content (Videos)</p></a></div>
+                    </td>
+                </tr> 
                 <tr class="menu-row" >
                     <td class="menu-btn menu-icon-patient">
                         <a href="patient.php" class="non-style-link-menu"><div><p class="menu-text">Patients</p></a></div>
@@ -143,7 +153,7 @@
                     </td>
                     
                 </tr>
-                <tr>
+                <!-- <tr>
                     <td colspan="4" style="padding-top:0px;width: 100%;" >
                         <center>
                         <table class="filter-container" border="0" >
@@ -194,7 +204,7 @@
                         </center>
                     </td>
                     
-                </tr>
+                </tr> -->
                 
                 <?php
                     if($_POST){
@@ -213,7 +223,7 @@
                         }
                         //echo $sqlpt2;
                         //echo $sqlpt1;
-                        $sqlmain= "select appointment.appoid,schedule.scheduleid,schedule.title,doctor.docname,patient.pname,schedule.scheduledate,schedule.scheduletime,appointment.apponum,appointment.appodate from schedule inner join appointment on schedule.scheduleid=appointment.scheduleid inner join patient on patient.pid=appointment.pid inner join doctor on schedule.docid=doctor.docid";
+                        $sqlmain= "select * from appointment  inner join patient on patient.pid=appointment.pid";
                         $sqllist=array($sqlpt1,$sqlpt2);
                         $sqlkeywords=array(" where "," and ");
                         $key2=0;
@@ -230,7 +240,7 @@
                         
                         //
                     }else{
-                        $sqlmain= "select appointment.appoid,schedule.scheduleid,schedule.title,doctor.docname,patient.pname,schedule.scheduledate,schedule.scheduletime,appointment.apponum,appointment.appodate from schedule inner join appointment on schedule.scheduleid=appointment.scheduleid inner join patient on patient.pid=appointment.pid inner join doctor on schedule.docid=doctor.docid  order by schedule.scheduledate desc";
+                        $sqlmain= "select * from appointment  inner join patient on patient.pid=appointment.pid";
 
                     }
 
@@ -243,7 +253,7 @@
                        <center>
                         <div class="abc scroll">
                         <table width="93%" class="sub-table scrolldown" border="0">
-                        <thead>
+                        <thead style="background:#FFC0CB;">
                         <tr>
                                 <th class="table-headin">
                                     Patient name
@@ -256,18 +266,18 @@
                                
                                 
                                 <th class="table-headin">
-                                    Doctor
+                                    Category
                                 </th>
                                 <th class="table-headin">
                                     
                                 
-                                    Session Title
+                                Appointment Title
                                     
                                     </th>
                                 
-                                <th class="table-headin" style="font-size:10px">
+                                <th class="table-headin"  >
                                     
-                                    Session Date & Time
+                                    Appointment Time
                                     
                                 </th>
                                 
@@ -312,14 +322,16 @@
                                     $row=$result->fetch_assoc();
                                     $appoid=$row["appoid"];
                                     $scheduleid=$row["scheduleid"];
-                                    $title=$row["title"];
+                                    $title=$row["apptitle"];
                                     $docname=$row["docname"];
                                     $scheduledate=$row["scheduledate"];
                                     $scheduletime=$row["scheduletime"];
                                     $pname=$row["pname"];
                                     $apponum=$row["apponum"];
                                     $appodate=$row["appodate"];
-                                    echo '<tr >
+                                    $appotime=$row["apptime"];
+                                    $appcategory=$row["speciality"];
+                                    echo '<tr style="text-align:center;">
                                         <td style="font-weight:600;"> &nbsp;'.
                                         
                                         substr($pname,0,25)
@@ -329,13 +341,13 @@
                                         
                                         </td>
                                         <td>
-                                        '.substr($docname,0,25).'
+                                        '.substr($appcategory,0,25).'
                                         </td>
                                         <td>
                                         '.substr($title,0,15).'
                                         </td>
-                                        <td style="text-align:center;font-size:12px;">
-                                            '.substr($scheduledate,0,10).' <br>'.substr($scheduletime,0,5).'
+                                        <td style="text-align:center;">
+                                            '.substr($appotime,0,10).'  
                                         </td>
                                         
                                         <td style="text-align:center;">

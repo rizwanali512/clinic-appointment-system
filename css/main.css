@@ -381,6 +381,12 @@ input[type=search]:focus {
 .menu-icon-doctor{
   background-image: url('../img/icons/doctors.svg');
 }
+.menu-icon-video{
+  background-image: url('../img/icons/video.png');
+}
+.menu-icon-online-learning{
+  background-image: url('../img/icons/online-learning.png');
+}
 .menu-icon-schedule{
   background-image: url('../img/icons/schedule.svg');
 }
