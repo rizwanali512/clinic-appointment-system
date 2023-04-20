@@ -13,7 +13,7 @@
     
     
 </head>
-<body style="background-color: #FFC0CB;">
+<body style="background-color: #21AEF9;">
     <?php
 
     //learn from w3schools.com

@@ -111,7 +111,7 @@
                         <tr >
                             
                             <td colspan="2" class="nav-bar" >
-                            <p style="font-size: 30px;color: #FFC0CB;font-weight:bold;padding: 0 0 0 50px ;margin: 0;text-align: left;">
+                            <p style="font-size: 30px;color: #21AEF9;font-weight:bold;padding: 0 0 0 50px ;margin: 0;text-align: left;">
                                     Admin Dashboard
                                 </p>
                                 <!-- <form action="doctors.php" method="post" class="header-search">
@@ -264,7 +264,7 @@
                                     <center>
                                         <div class="abc scroll" style="height: 400px;">
                                         <table width="85%" class="sub-table scrolldown" border="0">
-                                        <thead style="background:#FFC0CB;">
+                                        <thead style="background:#21AEF9;">
                                         <tr>    
                                                 <th class="table-headin" style="font-size: 12px;">
                                                         
@@ -277,19 +277,19 @@
                                                 <th class="table-headin">
                                                     
                                                 
-                                                    Appointemnt title
+                                                    Appointment title
                                                     
                                                 </th>
                                                 <th class="table-headin">
                                                     
                                                 
-                                                    Appointemnt Date
+                                                    Appointment Date
                                                     
                                                 </th>
                                                 <th class="table-headin">
                                                     
                                                 
-                                                    Appointemnt Time
+                                                    Appointment Time
                                                     
                                                 </th>
                                             </tr>

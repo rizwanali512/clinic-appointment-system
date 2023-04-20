@@ -183,7 +183,7 @@
                        <center>
                         <div class="abc scroll">
                         <table width="93%" class="sub-table scrolldown"  style="border-spacing:0;">
-                        <thead style="background:#FFC0CB;">
+                        <thead style="background:#21AEF9;">
                         <tr>
                                 <th class="table-headin">
                                     
