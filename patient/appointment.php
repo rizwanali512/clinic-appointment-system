@@ -555,7 +555,7 @@
                             <tr>
                                 <td class="label-td" colspan="2">
                                     <select name="specid" id="" class="box" >
-                                    <option value="" disabled selected hidden>Choose Categoty Name from the list</option><br/>';
+                                    <option value="" disabled selected hidden>Choose Category Name from the list</option><br/>';
                                         
         
                                         $list11 = $database->query("select  * from  specialties order by sname asc;");
@@ -597,9 +597,9 @@
                            
                             <tr>
                                 <td colspan="2">
-                                    <input type="reset" value="Reset" class="login-btn btn-primary-soft btn" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <!--<input type="reset" value="Reset" class="login-btn btn-primary-soft btn" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
                                 
-                                    <input type="submit" value="Book Now" class="login-btn btn-primary btn" name="booknow">
+                                    <input type="submit" value="Book Now" class="login-btn btn-primary btn" style="float:right" name="booknow">
                                 </td>
                 
                             </tr>
