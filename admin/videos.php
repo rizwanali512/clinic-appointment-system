@@ -241,7 +241,7 @@
                         
                         //
                     }else{
-                        $sqlmain= "select * from RefreshersCourses;";
+                        $sqlmain= "select * from VideosContent;";
 
                     }
 
@@ -307,11 +307,19 @@
                                     $appoid=$row["id"];
                                     $title=$row["title"];
                                     $file=$row["file"];
+                                    $url=$row["url"];
+
                                    
                                     echo '<tr style="text-align:center;">
                                         <td style="font-weight:600;"> &nbsp;'.
                                         
                                         substr($title,0,25)
+                                        
+                                        .'</td >
+                                        <td style="font-weight:600;"> &nbsp;'.
+                                        
+                                        substr($url,0,25)
+                                        
                                         .'</td >
                                         <td style="text-align:center;font-size:23px;font-weight:500; color: var(--btnnicetext);">
                                         '.$file.'
@@ -325,7 +333,7 @@
                                         
                                         <!--<a href="?action=view&id='.$appoid.'" class="non-style-link"><button  class="btn-primary-soft btn button-icon btn-view"  style="padding-left: 40px;padding-top: 12px;padding-bottom: 12px;margin-top: 10px;"><font class="tn-in-text">View</font></button></a>
                                        &nbsp;&nbsp;&nbsp;-->
-                                       <a href="?action=drop&id='.$appoid.'&name='.$pname.'&session='.$title.'&apponum='.$apponum.'" class="non-style-link"><button  class="btn-primary-soft btn button-icon btn-delete"  style="padding-left: 40px;padding-top: 12px;padding-bottom: 12px;margin-top: 10px;"><font class="tn-in-text">Open</font></button></a>
+                                       <a href="'.$url.'" target="_blank" class="non-style-link"><button  class="btn-primary-soft btn button-icon btn-delete"  style="padding-left: 40px;padding-top: 12px;padding-bottom: 12px;margin-top: 10px;"><font class="tn-in-text">Open</font></button></a>
                                        &nbsp;&nbsp;&nbsp;</div>
                                         </td>
                                     </tr>';
@@ -379,16 +387,26 @@
                             </tr>
                             <tr>
                                 <td class="label-td" colspan="2">
-                                <form method="post" enctype="multipart/form-data" action="add-content.php"  class="add-new-form">
+                                <form method="post" enctype="multipart/form-data" action="add-video.php"  class="add-new-form">
                                     <label for="title" class="form-label">Title : </label>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="label-td" colspan="2">
-                                    <input type="text" name="title" class="input-text" placeholder="Name of this Session" required><br>
+                                    <input type="text" name="title" class="input-text" placeholder="Name" required><br>
                                 </td>
                             </tr>
-                             
+                             <tr>
+                                <td class="label-td" colspan="2">
+                                <form method="post" enctype="multipart/form-data" action="add-content.php"  class="add-new-form">
+                                    <label for="title" class="form-label">Url : </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="label-td" colspan="2">
+                                    <input type="text" name="url" class="input-text" placeholder="Url" required><br>
+                                </td>
+                            </tr>
                             <tr>
                                 <td class="label-td" colspan="2">
                                 <input type="file" id="file" name="file" required><br><br>
