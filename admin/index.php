@@ -85,7 +85,7 @@
                 </tr> -->
                 <tr class="menu-row">
                     <td class="menu-btn menu-icon-appoinment">
-                        <a href="appointment.php" class="non-style-link-menu"><div><p class="menu-text">Appointment</p></a></div>
+                        <a href="appointment.php" class="non-style-link-menu"><div><p class="menu-text">Appointments</p></a></div>
                     </td>
                 </tr>
                 <tr class="menu-row">
@@ -95,7 +95,7 @@
                 </tr> 
                 <tr class="menu-row">
                     <td class="menu-btn menu-icon-video ">
-                        <a href="videos.php" class="non-style-link-menu "><div><p class="menu-text">Media Content (Videoss)</p></a></div>
+                        <a href="videos.php" class="non-style-link-menu "><div><p class="menu-text">Media Content (Videos)</p></a></div>
                     </td>
                 </tr> 
                 <tr class="menu-row" >
@@ -266,7 +266,7 @@
                                         <table width="85%" class="sub-table scrolldown" border="0">
                                         <thead style="background:#21AEF9;">
                                         <tr>    
-                                                <th class="table-headin" style="font-size: 12px;">
+                                                <th class="table-headin">
                                                         
                                                     Appointment number
                                                     
