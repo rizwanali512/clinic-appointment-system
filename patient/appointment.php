@@ -274,16 +274,13 @@
                                                                 <div class="h3-search">
                                                                     Appointment Number:<div class="h1-search">0'.$appoid.'</div>
                                                                 </div>
-                                                                <div class="h3-search">
-                                                                    '.substr($docname,0,30).'
-                                                                </div>
+                                                                
                                                                 
                                                                 
                                                                 <div class="h4-search">
                                                                     Scheduled Date: '.$appodate.'<br>Starts: <b>@'.substr($scheduletime,0,5).'</b> 
                                                                 </div>
                                                                 <br>
-                                                                <!-- <a href="?action=drop&id='.$appoid.'&title='.$title.'&doc='.$docname.'" ><button  class="login-btn btn-primary-soft btn "  style="padding-top:11px;padding-bottom:11px;width:100%"><font class="tn-in-text">Cancel Booking</font></button></a>-->
                                                         </div>
                                                                 
                                                     </div>
@@ -380,7 +377,6 @@
             ';
         }elseif($action=='drop'){
             $title=$_GET["title"];
-            $docname=$_GET["doc"];
             
             echo '
             <div id="popup1" class="overlay">
@@ -391,7 +387,6 @@
                         <div class="content">
                             You want to Cancel this Appointment?<br><br>
                             Session Name: &nbsp;<b>'.substr($title,0,40).'</b><br>
-                            Doctor name&nbsp; : <b>'.substr($docname,0,40).'</b><br><br>
                             
                         </div>
                         <div style="display: flex;justify-content: center;">
@@ -407,7 +402,6 @@
             $sqlmain= "select * from doctor where docid='$id'";
             $result= $database->query($sqlmain);
             $row=$result->fetch_assoc();
-            $name=$row["docname"];
             $email=$row["docemail"];
             $spe=$row["specialties"];
             
@@ -661,7 +655,6 @@
             $sqlmain= "select schedule.scheduleid,schedule.title,doctor.docname,schedule.scheduledate,schedule.scheduletime,schedule.nop from schedule inner join doctor on schedule.docid=doctor.docid  where  schedule.scheduleid=$id";
             $result= $database->query($sqlmain);
             $row=$result->fetch_assoc();
-            $docname=$row["docname"];
             $scheduleid=$row["scheduleid"];
             $title=$row["title"];
             $scheduledate=$row["scheduledate"];
@@ -709,11 +702,7 @@
                                     <label for="Email" class="form-label">Doctor of this session: </label>
                                 </td>
                             </tr>
-                            <tr>
-                                <td class="label-td" colspan="2">
-                                '.$docname.'<br><br>
-                                </td>
-                            </tr>
+                           
                             <tr>
                                 <td class="label-td" colspan="2">
                                     <label for="nic" class="form-label">Scheduled Date: </label>

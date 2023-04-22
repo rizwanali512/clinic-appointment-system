@@ -242,8 +242,7 @@
                                     $pid=$row["pid"];
                                     $name=$row["pname"];
                                     $email=$row["pemail"];
-                                    $nic=$row["pnic"];
-                                    $dob=$row["pdob"];
+                                     $dob=$row["pdob"];
                                     $tel=$row["ptel"];
                                     
                                     echo '<tr style="text-align:center;">
@@ -297,8 +296,7 @@
             $row=$result->fetch_assoc();
             $name=$row["pname"];
             $email=$row["pemail"];
-            $nic=$row["pnic"];
-            $dob=$row["pdob"];
+             $dob=$row["pdob"];
             $tele=$row["ptel"];
             $address=$row["paddress"];
             echo '
@@ -352,16 +350,8 @@
                                 '.$email.'<br><br>
                                 </td>
                             </tr>
-                            <tr>
-                                <td class="label-td" colspan="2">
-                                    <label for="nic" class="form-label">NIC: </label>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="label-td" colspan="2">
-                                '.$nic.'<br><br>
-                                </td>
-                            </tr>
+                            
+                            
                             <tr>
                                 <td class="label-td" colspan="2">
                                     <label for="Tele" class="form-label">Cell: </label>

@@ -353,7 +353,7 @@
                     <center>
                     
                     
-                        <a class="close" href="schedule.php">&times;</a> 
+                        <a class="close" href="courses.php">&times;</a> 
                         <div style="display: flex;justify-content: center;">
                         <div class="abc">
                         <table width="80%" class="sub-table scrolldown add-doc-form-container" border="0">
@@ -414,7 +414,7 @@
                     <center>
                     <br><br>
                         <h2>Session Placed.</h2>
-                        <a class="close" href="schedule.php">&times;</a>
+                        <a class="close" href="courses.php">&times;</a>
                         <div class="content">
                         '.substr($titleget,0,40).' was scheduled.<br><br>
                             
@@ -437,7 +437,7 @@
                     <div class="popup">
                     <center>
                         <h2>Are you sure?</h2>
-                        <a class="close" href="appointment.php">&times;</a>
+                        <a class="close" href="courses.php">&times;</a>
                         <div class="content">
                             You want to delete this record<br><br>
                             Patient Name: &nbsp;<b>'.substr($nameget,0,40).'</b><br>
@@ -471,7 +471,7 @@
                     <div class="popup">
                     <center>
                         <h2></h2>
-                        <a class="close" href="doctors.php">&times;</a>
+                        <a class="close" href="courses.php">&times;</a>
                         <div class="content">
                             eDoc Web App<br>
                             

@@ -321,11 +321,8 @@
                                 for ( $x=0; $x<$result->num_rows;$x++){
                                     $row=$result->fetch_assoc();
                                     $appoid=$row["appoid"];
-                                    $scheduleid=$row["scheduleid"];
                                     $title=$row["apptitle"];
-                                    $docname=$row["docname"];
-                                    $scheduledate=$row["scheduledate"];
-                                    $scheduletime=$row["scheduletime"];
+                                     $scheduledate=$row["scheduledate"];
                                     $pname=$row["pname"];
                                     $apponum=$row["apponum"];
                                     $appodate=$row["appodate"];
@@ -438,7 +435,6 @@
         
                                         for ($y=0;$y<$list11->num_rows;$y++){
                                             $row00=$list11->fetch_assoc();
-                                            $sn=$row00["docname"];
                                             $id00=$row00["docid"];
                                             echo "<option value=".$id00.">$sn</option><br/>";
                                         };
@@ -550,7 +546,6 @@
             $sqlmain= "select * from doctor where docid='$id'";
             $result= $database->query($sqlmain);
             $row=$result->fetch_assoc();
-            $name=$row["docname"];
             $email=$row["docemail"];
             $spe=$row["specialties"];
             
