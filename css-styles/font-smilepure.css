@@ -1,0 +1,176 @@
+@font-face {
+  font-family: 'smilepure';
+  src:  url('../fonts/smilepure.eot');
+  src:  url('../fonts/smilepure.eot#iefix') format('embedded-opentype'),
+    url('../fonts/smilepure.ttf') format('truetype'),
+    url('../fonts/smilepure.woff') format('woff'),
+    url('../fonts/smilepure.svg#smilepure') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="smilepure-"], [class*=" smilepure-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'smilepure' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.smilepure-tooth:before {
+  content: "\e900";
+}
+.smilepure-broken-tooth:before {
+  content: "\e901";
+}
+.smilepure-teeth:before {
+  content: "\e902";
+}
+.smilepure-implant:before {
+  content: "\e903";
+}
+.smilepure-teeth-1:before {
+  content: "\e904";
+}
+.smilepure-tooth-1:before {
+  content: "\e905";
+}
+.smilepure-drilling:before {
+  content: "\e906";
+}
+.smilepure-dental-veneer:before {
+  content: "\e907";
+}
+.smilepure-dentist-chair:before {
+  content: "\e908";
+}
+.smilepure-mouthwash:before {
+  content: "\e909";
+}
+.smilepure-open-mouth:before {
+  content: "\e90a";
+}
+.smilepure-dentist:before {
+  content: "\e90b";
+}
+.smilepure-tooth-2:before {
+  content: "\e90c";
+}
+.smilepure-tooth-3:before {
+  content: "\e90d";
+}
+.smilepure-braces:before {
+  content: "\e90e";
+}
+.smilepure-braces-1:before {
+  content: "\e90f";
+}
+.smilepure-tooth-4:before {
+  content: "\e910";
+}
+.smilepure-removal:before {
+  content: "\e911";
+}
+.smilepure-crown:before {
+  content: "\e912";
+}
+.smilepure-tooth-5:before {
+  content: "\e913";
+}
+.smilepure-tooth-6:before {
+  content: "\e914";
+}
+.smilepure-floss:before {
+  content: "\e915";
+}
+.smilepure-tools:before {
+  content: "\e916";
+}
+.smilepure-toothbrush:before {
+  content: "\e917";
+}
+.smilepure-tooth-drill:before {
+  content: "\e918";
+}
+.smilepure-dentist-1:before {
+  content: "\e919";
+}
+.smilepure-magnifying-glass:before {
+  content: "\e91a";
+}
+.smilepure-dentist-chair-1:before {
+  content: "\e91b";
+}
+.smilepure-health-report:before {
+  content: "\e91c";
+}
+.smilepure-dentures:before {
+  content: "\e91d";
+}
+.smilepure-crown-1:before {
+  content: "\e91e";
+}
+.smilepure-plaque:before {
+  content: "\e91f";
+}
+.smilepure-tooth-extraction:before {
+  content: "\e920";
+}
+.smilepure-x-ray:before {
+  content: "\e921";
+}
+.smilepure-forceps:before {
+  content: "\e922";
+}
+.smilepure-teeth-brushing:before {
+  content: "\e923";
+}
+.smilepure-toothbrush-1:before {
+  content: "\e924";
+}
+.smilepure-toothbrush-2:before {
+  content: "\e925";
+}
+.smilepure-calcium:before {
+  content: "\e926";
+}
+.smilepure-tooth-7:before {
+  content: "\e927";
+}
+.smilepure-tooth-8:before {
+  content: "\e928";
+}
+.smilepure-tooth-9:before {
+  content: "\e929";
+}
+.smilepure-tooth-10:before {
+  content: "\e92a";
+}
+.smilepure-tooth-11:before {
+  content: "\e92b";
+}
+.smilepure-smartphone:before {
+  content: "\e92c";
+}
+.smilepure-tooth-12:before {
+  content: "\e92d";
+}
+.smilepure-braces-2:before {
+  content: "\e92e";
+}
+.smilepure-suction:before {
+  content: "\e92f";
+}
+.smilepure-tooth-fairy:before {
+  content: "\e930";
+}
+.smilepure-floss-1:before {
+  content: "\e931";
+}
