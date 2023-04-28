@@ -23,7 +23,7 @@
 
       container.wrap("<div class='twentytwenty-wrapper twentytwenty-" + sliderOrientation + "'></div>");
       if(!options.no_overlay) {
-        container.append("<div class='twentytwenty-overlay'></div>");
+       
       }
       var beforeImg = container.find("img:first");
       var afterImg = container.find("img:last");
