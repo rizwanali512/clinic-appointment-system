@@ -254,7 +254,7 @@
                        <center>
                         <div class="abc scroll">
                         <table width="93%" class="sub-table scrolldown" border="0">
-                        <thead style="background:#21AEF9;">
+                        <thead style="background:black; color:white">
                         <tr>
                                 <th class="table-headin" width="25%">
                                     Name

@@ -111,7 +111,7 @@
                         <tr >
                             
                             <td colspan="2" class="nav-bar" >
-                            <p style="font-size: 30px;color: #21AEF9;font-weight:bold;padding: 0 0 0 50px ;margin: 0;text-align: left;">
+                            <p style="font-size: 30px;color: black;font-weight:bold;padding: 0 0 0 50px ;margin: 0;text-align: left;">
                                     Admin Dashboard
                                 </p>
                                 <!-- <form action="doctors.php" method="post" class="header-search">
@@ -264,7 +264,7 @@
                                     <center>
                                         <div class="abc scroll" style="height: 400px;">
                                         <table width="85%" class="sub-table scrolldown" border="0">
-                                        <thead style="background:#21AEF9;">
+                                        <thead style="background-color:black; color: white";>
                                         <tr>    
                                                 <th class="table-headin">
                                                         
