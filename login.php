@@ -13,7 +13,7 @@
     
     
 </head>
-<body style="background-color: white;">
+<body style=" background-image: url('images/PinkMarble.jpg')">
     <?php
 
     //learn from w3schools.com
@@ -118,9 +118,14 @@
     <center>
     <div class="container">
         <table border="0" style="margin: 0;padding: 0;width: 60%;">
+        <tr>
+                <td>
+                    <img src="images/logo-light.png" style="width:200px;padding-top:30px" alt="">
+                </td>
+            </tr>
             <tr>
                 <td>
-                    <p class="header-text">Welcome Back!</p>
+                    <p class="header-text" style="margin-top:0px">Welcome Back!</p>
                 </td>
             </tr>
         <div class="form-body">

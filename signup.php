@@ -11,7 +11,7 @@
     <title>Sign Up</title>
     
 </head>
-<body style="background-color: #21AEF9;">
+<body style=" background-image: url('images/PinkMarble.jpg')">
 <?php
 
 //learn from w3schools.com
@@ -55,10 +55,14 @@ if($_POST){
 
     <center>
     <div class="container">
-        <table border="0">
+        <table border="0" style="margin: 0;padding: 0;width: 60%;">
+        <td style="    margin-left: 58%;
+    display: block;">
+                    <img src="images/logo-light.png" style="width:200px;padding-top:30px" alt="">
+                </td>
             <tr>
                 <td colspan="2">
-                    <p class="header-text">Let's Get Started</p>
+                    <p class="header-text" style="margin-top:0px">Let's Get Started</p>
                     <p class="sub-text">Add Your Personal Details to Continue</p>
                 </td>
             </tr>
