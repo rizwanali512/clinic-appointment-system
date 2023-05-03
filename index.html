@@ -1925,7 +1925,7 @@ var booked_wc_variables = {"prefix":"booked_wc_","ajaxurl":"https:\/\/smilepure.
 <div class="tm-contact-form-7  style-01 gutter-30 tm-animation move-up" id="tm-blog-6448ac726d630">
 	<div role="form" class="wpcf7" id="wpcf7-f398-p66-o1" lang="en-US" dir="ltr">
 <div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>
-<form action="/dentistry-focus/#wpcf7-f398-p66-o1" method="post" class="wpcf7-form init" novalidate="novalidate" data-status="init">
+<form   action="booking-complete.php" method="POST"   >
 <div style="display: none;">
 <input type="hidden" name="_wpcf7" value="398">
 <input type="hidden" name="_wpcf7_version" value="5.5.6">
@@ -1937,22 +1937,38 @@ var booked_wc_variables = {"prefix":"booked_wc_","ajaxurl":"https:\/\/smilepure.
 <div class="row">
 <div class="col-md-6">
 		<label>Full Name</label><br>
-		<span class="wpcf7-form-control-wrap your-name"><input type="text" name="your-name" value size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="e.g., Jonh Doe"></span>
+		<span class="wpcf7-form-control-wrap your-name"><input type="text" name="name" value size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="e.g., Jonh Doe"></span>
 	</div>
-<div class="col-md-6">
+
+	<div class="col-md-6">
+		<label>Email Address</label><br>
+		<span class="wpcf7-form-control-wrap your-service-requested"><input type="text" name="email" value size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false"></span>
+	</div>
+	<div class="col-md-6">
 		<label>Your Phone</label><br>
-		<span class="wpcf7-form-control-wrap yout-phone"><input type="tel" name="yout-phone" value size="40" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel" aria-required="true" aria-invalid="false"></span>
+		<span class="wpcf7-form-control-wrap yout-phone"><input type="tel" name="cell" value size="40" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel" aria-required="true" aria-invalid="false"></span>
 	</div>
 <div class="col-md-6">
 		<label>Type of Service required</label><br>
-		<span class="wpcf7-form-control-wrap your-service-requested"><input type="text" name="your-service-requested" value size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false"></span>
+		<select name="type" id="" class="box" >
+			<option value=""   selected hidden>Choose Category Name from the list</option><br/>
+			<option value="Acne Removal"      >Acne Removal</option><br/>
+			<option value="Hair Loss"      >Hair Loss</option><br/>
+			<option value="Skin Rejuvenation"      >Skin Rejuvenation</option><br/>
+
+		</select>	
+		<!-- <span class="wpcf7-form-control-wrap your-service-requested"><input type="text" name="your-service-requested" value size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false"></span> -->
 	</div>
 <div class="col-md-6">
-		<label>Select Time</label><br>
-		<span class="wpcf7-form-control-wrap time-request"><input type="text" name="time-request" value size="40" class="wpcf7-form-control wpcf7-text tm-timefield" aria-invalid="false"></span>
+		<label>Select Date</label><br>
+		<span class="wpcf7-form-control-wrap time-request"><input type="date" name="date" min="'.date('Y-m-d').'" value size="40" class="wpcf7-form-control wpcf7-text tm-timefield" aria-invalid="false"></span>
 	</div>
+	<div class="col-md-6">
+		<label>Select Time</label><br>
+		<span class="wpcf7-form-control-wrap time-request"><input type="time" name="time" class="input-text" min="08:00" max="20:00" placeholder="Time"  value size="40" class="wpcf7-form-control wpcf7-text tm-timefield" aria-invalid="false"></span>
+	</div>	
 <div class="col-md-12" style="margin-top: 10px;">
-		<input type="submit" value="Book Appointment" class="wpcf7-form-control has-spinner wpcf7-submit">
+		<input type="submit" value="Book"   name="booknow">
 	</div>
 </div>
 <div class="wpcf7-response-output" aria-hidden="true"></div></form></div></div>
@@ -2558,13 +2574,9 @@ var ic_vars = {"ajax_url":"https:\/\/smilepure.thememove.com\/wp-admin\/admin-aj
 <script type="text/javascript" src="js/insight-view.js" id="insight-view-js"></script>
 <script type="text/javascript" src="js/regenerator-runtime.min.js" id="regenerator-runtime-js"></script>
 <script type="text/javascript" src="js/wp-polyfill.min.js" id="wp-polyfill-js"></script>
-<script type="text/javascript" id="contact-form-7-js-extra">
-/* <![CDATA[ */
-var wpcf7 = {"api":{"root":"https:\/\/smilepure.thememove.com\/wp-json\/","namespace":"contact-form-7\/v1"}};
-/* ]]> */
+ 
 </script>
-<script type="text/javascript" src="js/index.js" id="contact-form-7-js"></script>
-<script type="text/javascript" src="js/jquery.twentytwenty.js" id="twentytwenty-js"></script>
+ <script type="text/javascript" src="js/jquery.twentytwenty.js" id="twentytwenty-js"></script>
 <script type="text/javascript" src="js/jquery.event.move.js" id="event-move-js"></script>
 <script id="rs-initialisation-scripts">
 		var	tpj = jQuery;

@@ -95,11 +95,7 @@
                         <a href="videos.php" class="non-style-link-menu "><div><p class="menu-text">Media Content (Videos)</p></a></div>
                     </td>
                 </tr> 
-                <tr class="menu-row" >
-                    <td class="menu-btn menu-icon-patient">
-                        <a href="patient.php" class="non-style-link-menu"><div><p class="menu-text">Patients</p></a></div>
-                    </td>
-                </tr>
+                 
 
             </table>
         </div>
@@ -223,7 +219,7 @@
                         }
                         //echo $sqlpt2;
                         //echo $sqlpt1;
-                        $sqlmain= "select * from appointment  inner join patient on patient.pid=appointment.pid";
+                        $sqlmain= "select * from PatientAppointments";
                         $sqllist=array($sqlpt1,$sqlpt2);
                         $sqlkeywords=array(" where "," and ");
                         $key2=0;
@@ -240,7 +236,7 @@
                         
                         //
                     }else{
-                        $sqlmain= "select * from appointment  inner join patient on patient.pid=appointment.pid";
+                        $sqlmain= "select * from PatientAppointments";
 
                     }
 
@@ -268,13 +264,7 @@
                                 <th class="table-headin">
                                     Category
                                 </th>
-                                <th class="table-headin">
-                                    
-                                
-                                Appointment Title
-                                    
-                                    </th>
-                                
+                                 
                                 <th class="table-headin"  >
                                     
                                     Appointment Time
@@ -287,11 +277,7 @@
                                     
                                 </th>
                                 
-                                <th class="table-headin">
-                                    
-                                    Events
-                                    
-                                </tr>
+                                 
                         </thead>
                         <tbody>
                         
@@ -320,14 +306,14 @@
                                 else{
                                 for ( $x=0; $x<$result->num_rows;$x++){
                                     $row=$result->fetch_assoc();
-                                    $appoid=$row["appoid"];
+                                    $appoid=$row["id"];
                                     $title=$row["apptitle"];
                                      $scheduledate=$row["scheduledate"];
-                                    $pname=$row["pname"];
-                                    $apponum=$row["apponum"];
-                                    $appodate=$row["appodate"];
-                                    $appotime=$row["apptime"];
-                                    $appcategory=$row["speciality"];
+                                    $pname=$row["name"];
+                                    $apponum=$row["id"];
+                                    $appodate=$row["date"];
+                                    $appotime=$row["time"];
+                                    $appcategory=$row["type"];
                                     echo '<tr style="text-align:center;">
                                         <td style="font-weight:600;"> &nbsp;'.
                                         
@@ -340,9 +326,7 @@
                                         <td>
                                         '.substr($appcategory,0,25).'
                                         </td>
-                                        <td>
-                                        '.substr($title,0,15).'
-                                        </td>
+                                       
                                         <td style="text-align:center;">
                                             '.substr($appotime,0,10).'  
                                         </td>
@@ -351,14 +335,7 @@
                                             '.$appodate.'
                                         </td>
 
-                                        <td>
-                                        <div style="display:flex;justify-content: center;">
-                                        
-                                        <!--<a href="?action=view&id='.$appoid.'" class="non-style-link"><button  class="btn-primary-soft btn button-icon btn-view"  style="padding-left: 40px;padding-top: 12px;padding-bottom: 12px;margin-top: 10px;"><font class="tn-in-text">View</font></button></a>
-                                       &nbsp;&nbsp;&nbsp;-->
-                                       <a href="?action=drop&id='.$appoid.'&name='.$pname.'&session='.$title.'&apponum='.$apponum.'" class="non-style-link"><button  class="btn-primary-soft btn button-icon btn-delete"  style="padding-left: 40px;padding-top: 12px;padding-bottom: 12px;margin-top: 10px;"><font class="tn-in-text">Cancel</font></button></a>
-                                       &nbsp;&nbsp;&nbsp;</div>
-                                        </td>
+                                         
                                     </tr>';
                                     
                                 }

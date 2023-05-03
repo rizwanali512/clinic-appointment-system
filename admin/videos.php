@@ -95,11 +95,7 @@
                         <a href="videos.php" class="non-style-link-menu "><div><p class="menu-text">Media Content (Videos)</p></a></div>
                     </td>
                 </tr> 
-                <tr class="menu-row" >
-                    <td class="menu-btn menu-icon-patient">
-                        <a href="patient.php" class="non-style-link-menu"><div><p class="menu-text">Patients</p></a></div>
-                    </td>
-                </tr>
+                
 
             </table>
         </div>
@@ -316,11 +312,14 @@
                                         substr($title,0,25)
                                         
                                         .'</td >
-                                        <td style="font-weight:600;"> &nbsp;'.
+                                        <td style="font-weight:600;"> 
+                                       <a href="'.$url.'" target="_blank" class=" ">&nbsp;'.
                                         
-                                        substr($url,0,25)
+                                       substr($url,0,25)
+                                       
+                                       .'  </a>
                                         
-                                        .'</td >
+                                        </td >
                                         <td style="text-align:center;font-size:23px;font-weight:500; color: var(--btnnicetext);">
                                         '.$file.'
                                         
@@ -333,7 +332,7 @@
                                         
                                         <!--<a href="?action=view&id='.$appoid.'" class="non-style-link"><button  class="btn-primary-soft btn button-icon btn-view"  style="padding-left: 40px;padding-top: 12px;padding-bottom: 12px;margin-top: 10px;"><font class="tn-in-text">View</font></button></a>
                                        &nbsp;&nbsp;&nbsp;-->
-                                       <a href="'.$url.'" target="_blank" class="non-style-link"><button  class="btn-primary-soft btn button-icon btn-delete"  style="padding-left: 40px;padding-top: 12px;padding-bottom: 12px;margin-top: 10px;"><font class="tn-in-text">Open</font></button></a>
+                                       <a href="uploads/'.$file.'" target="_blank" class="non-style-link"><button  class="btn-primary-soft btn button-icon btn-delete"  style="padding-left: 40px;padding-top: 12px;padding-bottom: 12px;margin-top: 10px;"><font class="tn-in-text">Open</font></button></a>
                                        &nbsp;&nbsp;&nbsp;</div>
                                         </td>
                                     </tr>';
@@ -404,12 +403,12 @@
                             </tr>
                             <tr>
                                 <td class="label-td" colspan="2">
-                                    <input type="text" name="url" class="input-text" placeholder="Url" required><br>
+                                    <input type="text" name="url" class="input-text" placeholder="Url"  ><br>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="label-td" colspan="2">
-                                <input type="file" id="file" name="file" required><br><br>
+                                <input type="file" id="file" name="file"  ><br><br>
                                  </td>
                             </tr>
                            

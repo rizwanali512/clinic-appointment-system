@@ -98,11 +98,7 @@
                         <a href="videos.php" class="non-style-link-menu "><div><p class="menu-text">Media Content (Videos)</p></a></div>
                     </td>
                 </tr> 
-                <tr class="menu-row" >
-                    <td class="menu-btn menu-icon-patient">
-                        <a href="patient.php" class="non-style-link-menu"><div><p class="menu-text">Patients</p></a></div>
-                    </td>
-                </tr>
+                
             </table>
         </div>
         <div class="dash-body" style="margin-top: 15px">
@@ -153,7 +149,7 @@
 
                                 $patientrow = $database->query("select  * from  patient;");
                                 $doctorrow = $database->query("select  * from  doctor;");
-                                $appointmentrow = $database->query("select  * from  appointment where appodate>='$today';");
+                                $appointmentrow = $database->query("select  * from  PatientAppointments where date>='$today';");
                                 $schedulerow = $database->query("select  * from  schedule where scheduledate='$today';");
 
 
@@ -171,11 +167,11 @@
                         
                         <center>
                         <table class="filter-container" style="border: none;" border="0">
-                            <tr>
+                            <!-- <tr>
                                 <td colspan="4">
                                     <p style="font-size: 20px;font-weight:600;padding-left: 12px;">Status</p>
                                 </td>
-                            </tr>
+                            </tr> -->
                             <tr>
                                 <!-- <td style="width: 25%;">
                                     <div  class="dashboard-items"  style="padding:20px;margin:auto;width:95%;display: flex">
@@ -190,7 +186,7 @@
                                                 <div class="btn-icon-back dashboard-icons" style="background-image: url('../img/icons/doctors-hover.svg');"></div>
                                     </div>
                                 </td> -->
-                                <td style="width: 25%;">
+                                <!-- <td style="width: 25%;">
                                     <div  class="dashboard-items"  style="padding:20px;margin:auto;width:95%;display: flex;">
                                         <div>
                                                 <div class="h1-dashboard">
@@ -202,8 +198,8 @@
                                         </div>
                                                 <div class="btn-icon-back dashboard-icons" style="background-image: url('../img/icons/patients-hover.svg');"></div>
                                     </div>
-                                </td>
-                                <td style="width: 25%;">
+                                </td> -->
+                                <!-- <td style="width: 25%;">
                                     <div  class="dashboard-items"  style="padding:20px;margin:auto;width:95%;display: flex; ">
                                         <div>
                                                 <div class="h1-dashboard" >
@@ -215,7 +211,7 @@
                                         </div>
                                                 <div class="btn-icon-back dashboard-icons" style="margin-left: 0px;background-image: url('../img/icons/book-hover.svg');"></div>
                                     </div>
-                                </td>
+                                </td> -->
                                 <!-- <td style="width: 25%;">
                                     <div  class="dashboard-items"  style="padding:20px;margin:auto;width:95%;display: flex;padding-top:26px;padding-bottom:26px;">
                                         <div>
@@ -274,12 +270,7 @@
                                                 <th class="table-headin">
                                                     Patient name
                                                 </th>
-                                                <th class="table-headin">
-                                                    
-                                                
-                                                    Appointment title
-                                                    
-                                                </th>
+                                                 
                                                 <th class="table-headin">
                                                     
                                                 
@@ -298,7 +289,7 @@
                                         
                                             <?php
                                             $nextweek=date("Y-m-d",strtotime("+1 week"));
-                                            $sqlmain= "select * from appointment  inner join patient on patient.pid=appointment.pid WHERE appointment.appodate BETWEEN NOW() AND DATE_ADD(NOW(), INTERVAL 7 DAY);";
+                                            $sqlmain= "select * from PatientAppointments ";
                                                 $result= $database->query($sqlmain);
                                                  if($result->num_rows==0){
                                                      echo '<tr>
@@ -320,17 +311,16 @@
                                                 else{
                                                  for ( $x=0; $x<$result->num_rows;$x++){
                                                     $row=$result->fetch_assoc();
-                                                    $appoid=$row["appoid"];
+                                                    $appoid=$row["id"];
                                                     $scheduleid=$row["scheduleid"];
-                                                    $title=$row["title"];
+                                                    $title=$row["name"];
                                                     $docname=$row["docname"];
                                                     $scheduledate=$row["scheduledate"];
                                                     $scheduletime=$row["scheduletime"];
-                                                    $pname=$row["pname"];
+                                                    $pname=$row["name"];
                                                     $apponum=$row["apponum"];
-                                                    $appodate=$row["appodate"];
-                                                    $apptitle=$row["apptitle"];
-                                                    $apptime = $row["apptime"];
+                                                    $appodate=$row["date"];
+                                                     $apptime = $row["time"];
                                                     echo '<tr style="text-align:center;">
 
 
@@ -343,10 +333,7 @@
                                                         
                                                         substr($pname,0,25)
                                                         .'</td >
-                                                        <td style="font-weight:600;"> &nbsp;'.
-                                                        
-                                                            substr($apptitle,0,25)
-                                                            .'</td >
+                                                    
                                                            
                                                         
                                                         <td>
