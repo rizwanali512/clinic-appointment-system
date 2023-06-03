@@ -116,7 +116,7 @@
 
 
     <center>
-    <div class="container">
+    <div class="container" style="height: 37rem">
         <table border="0" style="margin: 0;padding: 0;width: 60%;">
         <tr>
                 <td>
@@ -170,7 +170,7 @@
                 </td>
             </tr>
         </div>
-            <tr>
+            <!-- <tr>
                 <td>
                     <br>
                     <label for="" class="sub-text" style="font-weight: 280;">Don't have an account&#63; </label>
@@ -178,7 +178,7 @@
                     <br><br><br>
                 </td>
             </tr>
-                        
+                         -->
                         
     
                         
